@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="./SubsribeButton.css">
+    <script src="./SubscribeButton.js" defer></script>
+</head>
+<body>
+    <button id="subscribeButton" onclick="subscribe()" onblur="closeDropdown()">
+        <img src="./bell.jpg" id="bell"><span id="title">Subscribe</span> <span id="dropdown">V</span>
+
+        <div id="dropdownMenu">
+            <div class="dropButtons" onclick="statusImg('./bell.jpg')">
+                <img class="dropBell" src="./bell.jpg"><span class="Dropdowntitle">All</span>
+            </div>
+            <div class="dropButtons" onclick="statusImg('./ring.png')">
+                <img class="dropBell" src="./ring.png"><span class="Dropdowntitle">Personalised</span>
+            </div>
+            <div class="dropButtons" onclick="statusImg('./slash.png')">
+                <img class="dropBell" src="./slash.png"><span class="Dropdowntitle">None</span>
+            </div>
+            <div class="dropButtons" onclick="unsub()">
+                <img class="dropBell" src="./userminus.png"><span class="Dropdowntitle">Unsubscribe</span>
+            </div>
+        </div>
+    </button>
+    <div id="unsubscribe">
+        <h4 id="textUsub">Unsubscribe from Slaying The Dragon?</h4>
+        <button class="unsubBut" onclick="unsubDis()">Cancle</button>
+        <button class="unsubBut" id="unsub" onclick="unsubscribe()">Unsubscribe</button>
+    </div>
+</body>
+</html>
